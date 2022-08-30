@@ -8,6 +8,3 @@ if game.PlaceId == 9598746251 then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xdeformedbread/My-Scripts/main/mining%20clicker%20simulator.lua"))()
     else return
 end
-
-
-

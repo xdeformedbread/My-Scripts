@@ -1,0 +1,135 @@
+--globals
+
+--load ui
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+
+--functions and stuff
+Eggs = {}
+	for i,v in pairs(game:GetService("Workspace").Eggs:GetChildren()) do
+		if not table.find(Eggs, v.Name) then
+		table.insert(Eggs, v.Name)
+	end
+end
+
+
+
+
+
+--gui
+local Window = Rayfield:CreateWindow({
+	Name = "Raspberry Hub",
+	LoadingTitle = "[NEW! 🌴] Sandbox Hatchers X",
+	LoadingSubtitle = "by xdeformedbread#4207",
+	ConfigurationSaving = {
+		Enabled = false,
+		FolderName = RaspberryHub, -- Create a custom folder for your hub/game
+		FileName = "Fly Race"
+	},
+    Discord = {
+        Enabled = true,
+        Invite = "https://discord.com/invite/rgWdSEUmQ7",
+        RememberJoins = false
+    },
+	KeySystem = false, -- Set this to true to use our key system
+	KeySettings = {
+		Title = "Raspberry Hub",
+		Subtitle = "Key System",
+		Note = "Join for key, copied (discord.gg/rgWdSEUmQ7)",
+		FileName = "Raspberry Hub Keys",
+		SaveKey = false,
+		GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+		Key = "FrankTheTank"
+	},
+    setclipboard("https://discord.com/invite/rgWdSEUmQ7")
+})
+
+
+local Tab = Window:CreateTab("Main")
+
+local Section = Tab:CreateSection("Infinite Money")
+
+local Button = Tab:CreateButton({
+    Name = "Give Infinite Money",
+    Callback = function()
+        local args = {[1] = "999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999"}game:GetService("ReplicatedStorage").Events.GiveCurreny:FireServer(unpack(args))
+    end
+ })
+
+ local Section = Tab:CreateSection("Auto Buy Eggs")
+ local Paragraph = Tab:CreateParagraph({Title = "READ ME!", Content = "You have to be next to the egg. There is also no hatching animations. ALSO IMPORTANT, need to BUY the areas to be able to buy the eggs!"})
+ local Toggle = Tab:CreateToggle({
+    Name = "Buy Selected Egg",
+    CurrentValue = false,
+    Flag = "",
+    Callback = function(bool) 
+        getgenv().AutoEgg = bool
+		while getgenv().AutoEgg and task.wait() do
+            local args = {
+            [1] = getgenv().SelectedEgg,
+            [2] = "Buy8"
+            }
+        game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer(unpack(args))
+        end
+    end
+ })
+
+local Dropdown = Tab:CreateDropdown({
+    Name = "Select Egg",
+    Options = Eggs,
+    CurrentOption = "",
+    Flag = "", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Option)
+        getgenv().SelectedEgg = Option
+    end
+ })
+
+ local Tab = Window:CreateTab("Teleports")
+
+ local Section = Tab:CreateSection("Teleports")
+
+ local Button = Tab:CreateButton({
+    Name = "Teleport to world 1",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-40.0706482, 304.37027, 45.9349098)
+    end
+ })
+ local Button = Tab:CreateButton({
+    Name = "Teleport to world 2",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-41.9078445, 303.424011, -155.782715)
+    end
+ })
+ local Button = Tab:CreateButton({
+    Name = "Teleport to world 3",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(79.3408127, 303.648895, -372.62149)
+    end
+ })
+
+
+
+
+ 
+local Tab = Window:CreateTab("Credits")
+local Section = Tab:CreateSection("Credits")
+local Paragraph = Tab:CreateParagraph({Title = "Developer", Content = "This script was made by xdeformedbread#4207, if you bought this you got scammed! Join the discord!!"})
+local Button = Tab:CreateButton({
+    Name = "Copy Discord Link To clipboard",
+    Callback = function()
+        setclipboard("https://discord.gg/rgWdSEUmQ7")
+        toclipboard("https://discord.gg/rgWdSEUmQ7")
+          print("Join The Discord")
+      end    
+})
+
+
+
+
+
+--anti afk
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+wait(1)
+vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)

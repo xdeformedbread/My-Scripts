@@ -1,0 +1,375 @@
+--globals
+getgenv().autoClick = false
+getgenv().infBoost = false
+getgenv().autoRebirth = false
+
+--Variable
+local RE = game:GetService("ReplicatedStorage").RemoteEvents
+
+--load ui
+local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/Shaman.lua'))()
+
+--code
+function aClick()
+    while autoClick == true do task.wait()
+       RE.TargetClick:FireServer()
+    end
+end
+ 
+function infBoost()
+    while infiniteBoost == true do task.wait()
+        RE.StarterBoosts:FireServer()
+    end
+end
+
+function aRebirth()
+    while autoRebirth == true do task.wait()
+        local args = {
+                [1] = 1
+            }
+        RE.Rebirth:FireServer(unpack(args))
+    end
+end
+
+Eggs = {}
+    for i,v in pairs(game:GetService("Workspace").Eggs:GetChildren()) do
+        if not table.find(Eggs, v.Name) then
+        table.insert(Eggs, v.Name)
+    end
+end
+
+
+    
+
+
+--ui
+local Window = Library:Window({
+    Text = "[🎄CHRISTMAS SALE] Roblox But You Get Richer Every"
+})
+
+local Tab = Window:Tab({
+    Text = "Main"
+})
+
+local Tab2 = Window:Tab({
+    Text = "Teleports"
+})
+
+local Tab3 = Window:Tab({
+    Text = "Miscellaneous",
+    Side = "Left"
+})
+
+local Tab4 = Window:Tab({
+    Text = "Credits",
+    Side = "Left"
+})
+
+local MainSection = Tab:Section({
+    Text = "Main Features",
+    Side = "Left"
+})
+
+local UpgradeSection = Tab:Section({
+    Text = "Auto Buy Upgrades",
+    Side = "Right"
+})
+
+local EggSection = Tab:Section({
+    Text = "Auto Buy Eggs",
+    Side = "Left"
+})
+
+local TeleportSection = Tab2:Section({
+    Text = "Teleports",
+    Side = "Left"
+})
+
+local MiscSection = Tab3:Section({
+    Text = "Misc",
+    Side = "Left"
+})
+
+local DevSection = Tab4:Section({
+    Text = "Developer",
+    Side = "Left"
+})
+
+local CreditSection = Tab4:Section({
+    Text = "Helped With Ideas",
+    Side = "Right"
+})
+
+
+
+MainSection:Toggle({
+    Text = "Auto Clicker",
+        Default = false,
+            Tooltip = "Will auto click for you",
+                Callback = function(bool)
+                autoClick = bool
+            if bool then
+        aClick()
+    end
+end
+})
+
+MainSection:Toggle({
+    Text = "Infinite Boosts",
+        Default = false,
+            Tooltip = "Will give you infinite 2x gems and 2x clicks",
+                Callback = function(bool)
+                infiniteBoost = bool
+            if bool then
+        infBoost()
+    end
+end
+})
+
+MainSection:Toggle({
+    Text = "Auto Rebirth",
+        Default = false,
+            Tooltip = "Will auto rebirth for you.",
+                Callback = function(bool)
+                autoRebirth = bool
+            if bool then
+        aRebirth()
+    end
+end
+})
+
+UpgradeSection:Toggle({
+    Text = "Buy +1 Pets Equipped",
+        Default = false,
+            Tooltip = "Will buy pets Equipped for you.",
+                Callback = function(bool)
+                    PetsEquipped = bool
+                        if bool then while task.wait() do
+                    local args = {[1] = "PetsEquipped"}RE.Upgrade:FireServer(unpack(args))
+                if PetsEquipped ~= bool then break 
+            end
+        end
+    end
+end
+})
+
+UpgradeSection:Toggle({
+    Text = "Buy Auto Clicker",
+        Default = false,
+            Tooltip = "Will buy Auto Clicker for you.",
+                Callback = function(bool)
+                    AutoClicker = bool
+                        if bool then while task.wait() do
+                    local args = {[1] = "AutoClick"}RE.Upgrade:FireServer(unpack(args))
+                if AutoClicker ~= bool then break
+            end
+        end
+    end
+end
+})
+
+UpgradeSection:Toggle({
+    Text = "Buy Egg Opening Speed",
+        Default = false,
+            Tooltip = "Will buy Egg Opening Speed for you.",
+                Callback = function(bool)
+                    EggSpeed = bool
+                        if bool then while task.wait() do
+                    local args = {[1] = "EggSpeed"}RE.Upgrade:FireServer(unpack(args))
+                if EggSpeed ~= bool then break
+            end
+        end
+    end
+end
+})
+
+UpgradeSection:Toggle({
+    Text = "Buy Walk Speed",
+        Default = false,
+            Tooltip = "Will buy walk speed for you.",
+                Callback = function(bool)
+                    WalkSpeed = bool
+                        if bool then while task.wait() do
+                    local args = {[1] = "WalkSpeed"}RE.Upgrade:FireServer(unpack(args))
+                if WalkSpeed ~= bool then break
+            end
+        end
+    end
+end
+})
+
+UpgradeSection:Toggle({
+    Text = "Buy Faster Auto Clicker",
+        Default = false,
+            Tooltip = "Will buy walk speed for you.",
+                Callback = function(bool)
+                    FasterAutoClicker = bool
+                        if bool then while task.wait() do
+                    local args = {[1] = "FasterAutoClick"}RE.Upgrade:FireServer(unpack(args))
+                if FasterAutoClicker ~= bool then break
+            end
+        end
+    end
+end
+})
+
+UpgradeSection:Toggle({
+    Text = "Buy Jump Power",
+        Default = false,
+            Tooltip = "Will buy walk speed for you.",
+                Callback = function(bool)
+                    JumpPower = bool
+                        if bool then while task.wait() do
+                    local args = {[1] = "JumpPower"}RE.Upgrade:FireServer(unpack(args))
+                if JumpPower ~= bool then break
+            end
+        end
+    end
+end
+})
+
+EggSection:Toggle({
+    Text = "Buy Selected Egg",
+        Default = false,
+            Tooltip = "Will buy selected egg",
+                Callback = function(bool)
+		            getgenv().AutoEgg = bool
+			            while getgenv().AutoEgg and task.wait() do
+			        local args = {
+    		    [1] = getgenv().SelectedEgg
+			}
+        game:GetService("ReplicatedStorage").RemoteEvents.OpenEgg:FireServer(unpack(args))
+	end
+end
+})
+
+EggSection:Dropdown({
+    Text = "Select Egg",
+        List = Eggs,
+            Flag = "",
+        Callback = function(Option)
+    getgenv().SelectedEgg = Option
+end
+})
+
+
+
+TeleportSection:Button({
+    Text = "Teleport To Spawn",   
+        Callback = function()  
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(615.7614135742188, 10.729412078857422, 280.1891174316406)
+end
+})
+
+TeleportSection:Button({
+    Text = "Teleport To Town",   
+        Callback = function()  
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(584.2864990234375, 11.201729774475098, 444.86639404296875)
+end
+})
+
+TeleportSection:Button({
+    Text = "Teleport To Desert",   
+        Callback = function()  
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(560.7645263671875, 10.525375366210938, 727.9107666015625)
+end
+})
+
+TeleportSection:Button({
+    Text = "Teleport To Beach",   
+        Callback = function()  
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(531.5879516601562, 10.84443187713623, 1041.9215087890625)
+end
+})
+
+TeleportSection:Button({
+    Text = "Teleport To Snow",   
+        Callback = function()  
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(508.0250549316406, 10.525375366210938, 1332.8115234375)
+end
+})
+
+TeleportSection:Button({
+    Text = "Teleport To Glacier",   
+        Callback = function()  
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(492.20361328125, 11.579556465148926, 1640.2064208984375)
+end
+})
+
+TeleportSection:Button({
+    Text = "Teleport To Mine",   
+        Callback = function()  
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(472.1958312988281, 10.75185489654541, 1954.3896484375)
+end
+})
+
+TeleportSection:Button({
+    Text = "Teleport To Volcano",   
+        Callback = function()  
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(462.0523376464844, 11.06297779083252, 2268.970947265625)
+end
+})
+
+MiscSection:Slider({
+    Text = "FOV",
+    Default = 70,
+    Minimum = 0,
+    Maximum = 120,
+    Flag = "",
+    Callback = function(Value)
+    game.Workspace.CurrentCamera.FieldOfView = Value
+end
+})
+
+MiscSection:Label({
+    Text = "Yes, there is an anti-afk."
+})
+
+DevSection:Label({
+    Text = "Developer/Coder \n xdeformedbread#4207"
+})
+
+DevSection:Button({
+    Text = "Copy Discord Server Link",
+    Tooltip = "Will copy discord server link to clipboard",
+    Callback = function()
+        setclipboard("https://discord.gg/rgWdSEUmQ7")
+			toclipboard("https://discord.gg/rgWdSEUmQ7")
+end    
+})
+
+DevSection:Button({
+    Text = "Copy V3rm Link",
+    Tooltip = "Will copy v3rm link to clipboard",
+    Callback = function()
+        setclipboard("https://v3rmillion.net/member.php?action=profile&uid=2398060")
+			toclipboard("https://v3rmillion.net/member.php?action=profile&uid=2398060")
+end    
+})
+
+CreditSection:Label({
+    Text = "koby#8873 \n gave some ideas",
+})
+
+
+
+--anti afk
+repeat
+    wait()
+until game:IsLoaded()
+wait()
+
+if getconnections then
+    for _, v in next, getconnections(game:GetService("Players").LocalPlayer.Idled) do
+        v:Disable()
+    end
+end
+
+if not getconnections then
+    game:GetService("Players").LocalPlayer.Idled:connect(
+        function()
+            game:GetService("VirtualUser"):ClickButton2(Vector2.new())
+        end
+    )
+    print("poopy exploit")
+end

@@ -17,12 +17,12 @@ end
 
 --gui
 local Window = Rayfield:CreateWindow({
-	Name = "Raspberry Hub",
+	Name = "[NEW! 🌴] Sandbox Hatchers X",
 	LoadingTitle = "[NEW! 🌴] Sandbox Hatchers X",
 	LoadingSubtitle = "by xdeformedbread#4207",
 	ConfigurationSaving = {
 		Enabled = false,
-		FolderName = RaspberryHub, -- Create a custom folder for your hub/game
+		FolderName = "", -- Create a custom folder for your hub/game
 		FileName = "Fly Race"
 	},
     Discord = {
@@ -30,16 +30,6 @@ local Window = Rayfield:CreateWindow({
         Invite = "https://discord.com/invite/rgWdSEUmQ7",
         RememberJoins = false
     },
-	KeySystem = false, -- Set this to true to use our key system
-	KeySettings = {
-		Title = "Raspberry Hub",
-		Subtitle = "Key System",
-		Note = "Join for key, copied (discord.gg/rgWdSEUmQ7)",
-		FileName = "Raspberry Hub Keys",
-		SaveKey = false,
-		GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-		Key = "FrankTheTank"
-	},
     setclipboard("https://discord.com/invite/rgWdSEUmQ7")
 })
 

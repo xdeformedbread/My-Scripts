@@ -439,7 +439,7 @@ end
 
 
 --ui shit
-local win = DiscordLib:Window("Raspberry Hub Premium")
+local win = DiscordLib:Window("[🎄 EVENT!] Fly Race")
 
 local serv1 = win:Server("Main", "")
 
@@ -746,7 +746,7 @@ candyworld:Slider(
     end
 )
 
-cred:Label("This script was made by xdeformedbread#4207.\n This is the premium version!")
+cred:Label("This script was made by xdeformedbread#4207.")
 
 cred:Seperator()
 

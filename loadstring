@@ -1,5 +1,7 @@
-if game.PlaceId == ID then
- 
-elseif game.PlaceId == ID2 then
-   
+if game.PlaceId == 11206345614 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xdeformedbread/My-Scripts/main/Roblox%20but%20you%20get%20richer%20every",true))()
+elseif game.PlaceId == 11162791099 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xdeformedbread/My-Scripts/main/Sandbox%20hatchers%20x",true))()
+elseif game.PlaceId == 6679968919 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xdeformedbread/My-Scripts/main/Fly%20Race.lua",true))()
 end

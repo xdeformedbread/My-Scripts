@@ -1,0 +1,496 @@
+getgenv().Pickup = false
+getgenv().ChatSpammer = false
+getgenv().godClick = false
+getgenv().autoTap = false
+getgenv().autoRebirth = false
+getgenv().autoEgg = false
+getgenv().attackplayer = false
+getgenv().bossAttack = false
+getgenv().autoSuperRebirth = false
+getgenv().autoUpgrade = false
+getgenv().autoSuperUpgrade = false
+
+local repo = 'https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/'
+
+local Library = loadstring(game:HttpGet(repo .. 'Library.lua'))()
+local ThemeManager = loadstring(game:HttpGet(repo .. 'addons/ThemeManager.lua'))()
+local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
+local Window = Library:CreateWindow({
+   
+    Title = 'Rasberry Hub 🎉FREE PET!🎉 Clicker Madness!😈',
+    Center = true, 
+    AutoShow = true,
+})
+local remotePath = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices
+local clickMod = require(game:GetService("Players").LocalPlayer.PlayerScripts.Aero.Controllers.UI.Click)
+
+
+--Auto tap function
+function aTap()
+    spawn(function()
+        while getgenv().autoTap == true do
+        clickMod:Click()
+        wait()
+        end
+    end)
+end
+function gTap()
+    while getgenv().godClick == true do wait()
+        local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))local args = {[1] = 3.697296e+197}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))
+    end
+end
+
+function aAttack()
+    spawn(function()
+        while getgenv().attackplayer == true do 
+                for i,v in next, game:GetService("Players"):GetPlayers() do
+                        if v ~= game:GetService("Players").LocalPlayer then
+                        local args = {[1] =game:GetService("Players")[v.Name]}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.CursorCannonService.FireCursor:FireServer(unpack(args))
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(546.973083, 28.8025417, -173.112762, 0.461820334, 0, -0.886972487, 0, 1, 0, 0.886972427, 0, 0.4618201)  
+                    wait()
+                end
+            end
+        end
+    end)
+end
+function autoRebirth(RebirthAmount)
+    spawn(function()
+        while getgenv().autoRebirth == true do
+            remotePath.RebirthService.BuyRebirths:FireServer(RebirthAmount)
+            wait()
+        end
+    end)
+ end
+
+ function autoCollectDrops()
+    spawn(function()
+        while wait() do
+            if not getgenv().Pickup then break end
+            for i,v in pairs(game:GetDescendants()) do
+                if v.Name=="TouchInterest" and v.Parent.Parent.Name=="BasePickup" then
+                    local plyrHead=game.Players.LocalPlayer.Character.HumanoidRootPart
+                    firetouchinterest(plyrHead,v.Parent,0)
+                end
+            end
+        end
+    end)
+  end
+  function autoEggs(EggAmount)
+    spawn(function()  
+            while getgenv().autoEgg == true do
+            remotePath.EggService.Purchase:FireServer(EggAmount)
+            wait()
+        end
+    end)
+end
+function bAttack()
+    spawn(function()
+        while getgenv().bossAttack == true do
+            local args = {[1] = "Easter Bunny"}game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.CursorCannonService.FireBoss:FireServer(unpack(args))
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(789.0367431640625, 8.732751846313477, -268.4192199707031)  
+            wait()
+        end
+    end)
+end
+function sRebirth(SRebirthAmount)
+    spawn(function()
+             while getgenv().autoSuperRebirth == true do
+            remotePath.RebirthService.BuySuperRebirths:FireServer(SRebirthAmount)
+            wait()
+        end
+    end)
+end
+function aUpgrade(UpgradeType)
+    spawn(function()
+        while getgenv().autoUpgrade == true do
+            remotePath.UpgradeService.BuyUpgrade:FireServer(UpgradeType)
+            wait()
+        end
+    end)
+end
+function sUpgrade(SUpgradeType)
+    spawn(function()
+        while getgenv().autoSuperUpgrade == true do
+            remotePath.SuperUpgradeService.BuyUpgrade:FireServer(SUpgradeType)
+            wait()
+        end
+    end)
+end
+
+
+
+--GUI
+local Tabs = {
+    -- Creates a new tab titled Main
+    Main = Window:AddTab('Main'),
+}
+
+local LeftGroupBox = Tabs.Main:AddLeftGroupbox('Main Features')
+
+LeftGroupBox:AddToggle('AutoClick', {
+    Text = 'Auto Click Normal',
+    Default = false, -- Default value (true / false)
+    Tooltip = 'Auto Clicks At Normal Speeds', -- Information shown when you hover over the toggle
+})
+
+Toggles.AutoClick:OnChanged(function(bool)
+    getgenv().autoTap = bool
+        print('Auto Click Normal On', bool);
+        if bool then
+        aTap()
+	end  
+end)
+
+LeftGroupBox:AddToggle('AutoClickGod', {
+    Text = 'Auto Click GOD (disable pop up)',
+    Default = false, -- Default value (true / false)
+    Tooltip = 'Auto Clicks At GOD Speeds reccomend disable pop ups', -- Information shown when you hover over the toggle
+})
+
+Toggles.AutoClickGod:OnChanged(function(bool)
+    getgenv().godClick = bool
+        print('Auto Click GOD On', bool);
+        if bool then
+        gTap()
+	end  
+end)
+local MyButton = LeftGroupBox:AddButton('Disable Pop Ups', function()
+    game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.PopupEffectService.PopupEffect:Destroy()
+    print("Pop up's are now gone :)")
+end)
+local MyButton = LeftGroupBox:AddButton('Enable Pop Ups', function()
+    game:GetService("TeleportService"):Teleport(game.PlaceId)
+    print("Pop up's are now back :)")
+    
+end)
+LeftGroupBox:AddDivider()
+
+LeftGroupBox:AddLabel('Collect All Drops')
+
+LeftGroupBox:AddToggle('CollectDrops', {
+    Text = 'Auto Collect Drops',
+    Default = false, -- Default value (true / false)
+    Tooltip = 'Auto Collects stuff on the ground reccomend disable pop ups', -- Information shown when you hover over the toggle
+})
+
+Toggles.CollectDrops:OnChanged(function(bool)
+    getgenv().Pickup = bool
+        print('Auto pickup On', bool);
+        if bool then
+        autoCollectDrops()
+	end  
+end)
+LeftGroupBox:AddDivider()
+
+LeftGroupBox:AddLabel('Auto King Of The Hill')
+
+LeftGroupBox:AddToggle('AutoKOTH', {
+    Text = 'Auto King Of The Hill',
+    Default = false, -- Default value (true / false)
+    Tooltip = 'Auto King Of The Hill', -- Information shown when you hover over the toggle
+})
+Toggles.AutoKOTH:OnChanged(function(bool)
+    getgenv().attackplayer = bool
+        print('Auto KOTH On', bool);
+        if bool then
+        aAttack()
+    end  
+end)
+LeftGroupBox:AddDivider()
+
+LeftGroupBox:AddLabel('Auto Kill Boss')
+
+LeftGroupBox:AddToggle('AutoBoss', {
+    Text = 'Auto Kill Boss',
+    Default = false, -- Default value (true / false)
+    Tooltip = 'Auto Kill Boss', -- Information shown when you hover over the toggle
+})
+Toggles.AutoBoss:OnChanged(function(bool)
+    getgenv().bossAttack = bool
+        print('Auto Boss On', bool);
+        if bool then
+        bAttack()
+    end  
+end)
+
+local RightGroupBox = Tabs.Main:AddRightGroupbox('Main Features')
+
+
+
+--dropdowns
+RightGroupBox:AddToggle('MyDropdown', {
+    Text = 'Buy Selected Egg',
+    Default = false, -- Default value (true / false)
+    Tooltip = 'Auto buys the egg that you selected', -- Information shown when you hover over the toggle
+})
+Toggles.MyDropdown:OnChanged(function(bool)
+    getgenv().autoEgg = bool
+        print('Auto egg is on ',bool)
+        if bool and selectedEgg then
+        autoEggs(selectedEgg)
+    end  
+end)
+RightGroupBox:AddDropdown('MyDropdown', {
+
+    Values = {"basic", "lava", "desert", "ocean", "winter", "toxic", "candy", "forest", "storm", "blocky", "space", "dominus", "infinity", "future", "city", "moon", "fire", "halloween", "valentines"},
+    Default = 0, 
+    Multi = false, -- true / false, allows multiple choices to be selected
+
+    Text = 'Select Egg',
+    Tooltip = 'Select the egg you want to buy', -- Information shown when you hover over the textbox
+})
+
+Options.MyDropdown:OnChanged(function(value)
+    selectedEgg = value
+    print(value)
+end)
+
+RightGroupBox:AddDivider()
+
+RightGroupBox:AddLabel('Auto Buy Rebirths')
+
+RightGroupBox:AddToggle('AutoRebirth', {
+    Text = 'Auto Rebirth',
+    Default = false, -- Default value (true / false)
+    Tooltip = 'Auto buys the selected Rebirths', -- Information shown when you hover over the toggle
+})
+Toggles.AutoRebirth:OnChanged(function(bool)
+    getgenv().autoRebirth = bool
+        print('Auto rebirth is on ',bool)
+        if bool and selectedRebirth then
+        autoRebirth(selectedRebirth)
+    end  
+end)
+RightGroupBox:AddDropdown('AutoRebirth', {
+
+    Values = {"1","10","100","1000","10000","100000","1000000", "10000000","100000000","1000000000","10000000000","100000000000","1000000000000","1000000000000","10000000000000","100000000000000","1000000000000000","10000000000000000","100000000000000000","1000000000000000000","10000000000000000000","100000000000000000000","1000000000000000000000","10000000000000000000000","100000000000000000000000","1000000000000000000000000","10000000000000000000000000","100000000000000000000000000","1000000000000000000000000000","10000000000000000000000000000","100000000000000000000000000000","1000000000000000000000000000000","10000000000000000000000000000000","100000000000000000000000000000000","1000000000000000000000000000000000","10000000000000000000000000000000000","100000000000000000000000000000000000","1000000000000000000000000000000000000","10000000000000000000000000000000000000","100000000000000000000000000000000000000","1000000000000000000000000000000000000000","10000000000000000000000000000000000000000","100000000000000000000000000000000000000000","1000000000000000000000000000000000000000000","10000000000000000000000000000000000000000000","100000000000000000000000000000000000000000000"},
+    Default = 0,
+    Multi = false,
+
+    Text = 'Select Rebirth Amount',
+    Tooltip = 'Select the amount of rebirths you want to buy', -- Information shown when you hover over the textbox
+})
+
+Options.AutoRebirth:OnChanged(function(value)
+    selectedRebirth = value
+    print(value)
+end)
+RightGroupBox:AddDivider()
+
+RightGroupBox:AddLabel('Auto Buy Super Rebirths')
+
+RightGroupBox:AddToggle('AutoSuperRebirth', {
+    Text = 'Auto Buy Super Rebirth',
+    Default = false, -- Default value (true / false)
+    Tooltip = 'Auto buys the selected Super Rebirths', -- Information shown when you hover over the toggle
+})
+Toggles.AutoSuperRebirth:OnChanged(function(bool)
+    getgenv().autoSuperRebirth = bool
+        print('Auto Super rebirth is on ',bool)
+        if bool and selectedSRebirth then
+        sRebirth(selectedSRebirth)
+    end  
+end)
+RightGroupBox:AddDropdown('AutoSuperRebirth', {
+
+    Values = {"1","10","100", "1000", "10000", "100000", "1000000", "10000000", "100000000", "1000000000", "10000000000"},
+    Default = 0,
+    Multi = false,
+
+    Text = 'Select Super Rebirth Amount',
+    Tooltip = 'Select the amount of Super rebirths you want to buy', -- Information shown when you hover over the textbox
+})
+Options.AutoSuperRebirth:OnChanged(function(value)
+    selectedSRebirth = value
+    print(value)
+end)
+
+RightGroupBox:AddDivider()
+
+RightGroupBox:AddLabel('Auto Buy Upgrades')
+
+
+RightGroupBox:AddToggle('AutoUpgrade', {
+    Text = 'Auto Buy Upgrades',
+    Default = false, -- Default value (true / false)
+    Tooltip = 'Auto buys the selected upgrades',  
+})
+
+Toggles.AutoUpgrade:OnChanged(function(bool)
+    getgenv().autoUpgrade = bool
+        print('Auto Upgrade is on ',bool)
+        if bool and selectedUpgrade then
+        aUpgrade(selectedUpgrade)
+    end  
+end)
+RightGroupBox:AddDropdown('AutoUpgrade', {
+
+    Values = {"ClickMultiply", "CursorDamage", "Health", "JumpPower", "PetStorage", "WalkSpeed",},
+    Default = 0,
+    Multi = false,
+
+    Text = 'Select Upgrade Amount',
+    Tooltip = 'Select the upgrade you want to buy',  
+})
+Options.AutoUpgrade:OnChanged(function(value)
+    selectedUpgrade = value
+    print(value)
+end)
+RightGroupBox:AddDivider()
+
+RightGroupBox:AddLabel('Auto Buy Super Upgrades')
+
+RightGroupBox:AddToggle('AutoSuperUpgrade', {
+    Text = 'Auto Buy Super Upgrades',
+    Default = false, -- Default value (true / false)
+    Tooltip = 'Auto buys the selected Super Upgrades',  
+})
+Toggles.AutoSuperUpgrade:OnChanged(function(bool)
+    getgenv().autoSuperUpgrade = bool
+        print('Auto Super Upgrade is on ',bool)
+        if bool and selectedSUpgrade then
+        sUpgrade(selectedSUpgrade)
+    end  
+end)
+RightGroupBox:AddDropdown('AutoSuperUpgrade', {
+
+    Values = {"BossHit", "DoubleDamage", "DoubleHealth", "PetSlots", "PetStorage",},
+    Default = 0,
+    Multi = false,
+
+    Text = 'Select Super Upgrade Amount',
+    Tooltip = 'Select the Super upgrade you want to buy',  
+})
+Options.AutoSuperUpgrade:OnChanged(function(value)
+    selectedSUpgrade = value
+    print(value)
+end)
+
+local TeleportTab = {
+    -- Creates a new tab titled Main
+    Teleports = Window:AddTab('Teleports'),
+}
+
+local LeftGroupBox = TeleportTab.Teleports:AddLeftGroupbox('Teleports')
+
+local Tp = LeftGroupBox:AddButton('spawn', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(555.6573486328125, 8.983256340026855, -401.5657043457031)
+end)
+local Tp = LeftGroupBox:AddButton('lava', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1747.4051513671875, 6.54957914352417, -734.7191772460938)
+end)
+local Tp = LeftGroupBox:AddButton('desert', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2241.4169921875, 6.5365166664123535, 1088.5269775390625)
+end)
+local Tp = LeftGroupBox:AddButton('ocean', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-257.15411376953125, 9.299580574035645, 2130.95068359375)
+end)
+local Tp = LeftGroupBox:AddButton('winter', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2260.64697265625, 6.54958963394165, 411.98321533203125)
+end)
+local Tp = LeftGroupBox:AddButton('toxic', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1737.9332275390625, 6.829605579376221, -2038.495361328125)
+end)
+local Tp = LeftGroupBox:AddButton('candy', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1356.0152587890625, 6.1495490074157715, -2242.25)
+end)
+local Tp = LeftGroupBox:AddButton('forest', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1784.87646484375, 6.441915988922119, 3259.710205078125)
+end)
+local Tp = LeftGroupBox:AddButton('storm', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-285.57916259765625, 7.819560527801514, -2666.960693359375)
+end)
+local Tp = LeftGroupBox:AddButton('blocky', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2936.01025390625, 9.068313598632812, -784.0640869140625)
+end)
+local Tp = LeftGroupBox:AddButton('space', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2394.46533203125, 6.44190788269043, 2925.121337890625)
+end)
+local Tp = LeftGroupBox:AddButton('dominus', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1047.809326171875, 6.441895008087158, 2255.235595703125)
+end)
+local Tp = LeftGroupBox:AddButton('infinity', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2247.584228515625, 6.867279529571533, -1764.8394775390625)
+end)
+local Tp = LeftGroupBox:AddButton('future', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1083.78369140625, 6.4419169425964355, 519.7918701171875)
+end)
+local Tp = LeftGroupBox:AddButton('city', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-956.110107421875, 6.441906452178955, 1027.88330078125)
+end)
+local Tp = LeftGroupBox:AddButton('moon', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2393.584716796875, 6.4418625831604, 1971.1143798828125)
+end)
+local Tp = LeftGroupBox:AddButton('fire', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2260.5830078125, 6.54955530166626, -732.4734497070312)
+end)
+local MiscTab = {
+    -- Creates a new tab titled Main
+    Misc = Window:AddTab('Miscellaneous'),
+}
+
+local LeftGroupBox = MiscTab.Misc:AddLeftGroupbox('Miscellaneous')
+LeftGroupBox:AddSlider('WalkSpeedSlider', {
+    Text = 'Walk Speed',
+    Default = 15,
+    Min = 0,
+    Max = 500,
+    Rounding = 0,
+
+    Compact = false, -- If set to true, then it will hide the label
+})
+
+local Number = Options.WalkSpeedSlider.Value
+Options.WalkSpeedSlider:OnChanged(function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Options.WalkSpeedSlider.Value
+end)
+LeftGroupBox:AddSlider('JumpPowerSlider', {
+    Text = 'Jump Power',
+    Default = 50,
+    Min = 0,
+    Max = 500,
+    Rounding = 0,
+
+    Compact = false, -- If set to true, then it will hide the label
+})
+local Number = Options.JumpPowerSlider.Value
+Options.JumpPowerSlider:OnChanged(function()
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = Options.JumpPowerSlider.Value
+end)
+LeftGroupBox:AddLabel("There is an integrated anti-afk")
+
+
+
+local CreditTab = {
+    -- Creates a new tab titled Main
+    Credits = Window:AddTab('Credits'),
+}
+
+local LeftGroupBox = CreditTab.Credits:AddLeftGroupbox('Credits')
+LeftGroupBox:AddLabel("Created by xdeformedbread#4207")
+LeftGroupBox:AddLabel("if you bought this you got scammed!")
+LeftGroupBox:AddLabel(" Join the discord!")
+
+local MyButton = LeftGroupBox:AddButton('Copy discord link', function()
+    setclipboard("https://discord.gg/rgWdSEUmQ7")
+    toclipboard("https://discord.gg/rgWdSEUmQ7")
+    print("Join The Discord")
+end)
+MyButton:AddTooltip("Copies the discord link to your clipboard")
+
+--anti afk
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+
+-- Script generated by SimpleSpy - credits to exx#9394
+
+--local args = {
+--    [1] = 5s
+--}
+
+--game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.MadnessService.Purchase:FireServer(unpack(args))
+-- red green pink yellow blue purple

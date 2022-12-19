@@ -13,7 +13,7 @@ local ThemeManager = loadstring(game:HttpGet(repo .. 'addons/ThemeManager.lua'))
 local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
 local Window = Library:CreateWindow({
    
-    Title = 'Rasberry Hub | ⚾ Home Run Simulator',
+    Title = 'Raspberry Hub | ⚾ Home Run Simulator',
     Center = true, 
     AutoShow = true,
 })

@@ -4,4 +4,8 @@ elseif game.PlaceId == 11162791099 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xdeformedbread/My-Scripts/main/Sandbox%20hatchers%20x",true))()
 elseif game.PlaceId == 6679968919 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xdeformedbread/My-Scripts/main/Fly%20Race.lua",true))()
+elseif game.PlaceId == 5490351219 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xdeformedbread/My-Scripts/main/Clicker%20Madness",true))()
+elseif game.PlaceId == 9598746251 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xdeformedbread/My-Scripts/main/Homer%20Run%20Simulator",true))()
 end

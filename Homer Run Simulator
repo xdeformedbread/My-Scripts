@@ -1,0 +1,287 @@
+--getgenvs, library, remotpath.
+getgenv().AutoHomerun = false
+getgenv().AutoStrength = false
+getgenv().AutoAcc = false
+getgenv().AutoSpeed = false 
+getgenv().autoCrates = false
+getgenv().AutoRebirth = false
+getgenv().AutoReward = false
+local repo = 'https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/'
+
+local Library = loadstring(game:HttpGet(repo .. 'Library.lua'))()
+local ThemeManager = loadstring(game:HttpGet(repo .. 'addons/ThemeManager.lua'))()
+local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
+local Window = Library:CreateWindow({
+   
+    Title = 'Rasberry Hub | ⚾ Home Run Simulator',
+    Center = true, 
+    AutoShow = true,
+})
+local remotePath = game:GetService("ReplicatedStorage").RF
+
+--functions
+function aHomerun()
+    spawn(function()
+        while getgenv().AutoHomerun == true do
+            local args = {[1] = 100}
+            remotePath.Launch_Ball:InvokeServer(unpack(args))
+            wait(2)
+        end
+    end)
+end
+function aStrength()
+    spawn(function()
+        while getgenv().AutoStrength == true do
+            local args = {[1] = "Strength",[2] = 1}remotePath.Upgrade_Attribute:InvokeServer(unpack(args))
+            wait()
+        end
+    end)
+end
+function AutoAccu()
+    spawn(function()
+        while getgenv().AutoAcc == true do
+            local args = {[1] = "Accuracy",[2] = 1}remotePath.Upgrade_Attribute:InvokeServer(unpack(args))
+            wait()
+        end
+    end)
+end
+function AutoSpeed()
+    spawn(function()
+        while getgenv().AutoSpeed == true do
+            local args = {[1] = "Speed",[2] = 1}remotePath.Upgrade_Attribute:InvokeServer(unpack(args))
+            wait()
+        end
+    end)
+end
+function autoCrates(CrateAmount)
+    spawn(function()
+        while getgenv().autoCrates == true do
+            remotePath.Open_Crate:InvokeServer(CrateAmount)
+            wait()
+        end
+    end)
+ end
+ function aRebirth()
+        spawn(function()
+            while getgenv().AutoRebirth == true do
+            remotePath.Purchase_Rebirth:InvokeServer()
+            wait(2)
+        end
+    end)
+end
+function aReward()
+	while getgenv().AutoReward == true do wait()
+		game:GetService("ReplicatedStorage").RF.Redeem_Free_Reward:InvokeServer()
+	end
+end
+--GUI
+local Tabs = {
+    -- Creates a new tab titled Main
+    Main = Window:AddTab('Main'),
+}
+
+local LeftGroupBox = Tabs.Main:AddLeftGroupbox('Main Features')
+LeftGroupBox:AddToggle('AutoHomeRun', {
+    Text = 'Auto Home Run',
+    Default = false, -- Default value (true / false)
+    Tooltip = 'Auto Hits 100% for you', -- Information shown when you hover over the toggle
+})
+Toggles.AutoHomeRun:OnChanged(function(bool)
+    getgenv().AutoHomerun = bool
+    if bool then
+        aHomerun()
+    end
+end)
+
+LeftGroupBox:AddDivider()
+
+LeftGroupBox:AddLabel('Upgrades')
+LeftGroupBox:AddToggle('AutoStrength', {
+    Text = 'Auto Strength',
+    Default = false, -- Default value (true / false)
+    Tooltip = 'Auto Upgrades Strength', -- Information shown when you hover over the toggle
+})
+Toggles.AutoStrength:OnChanged(function(bool)
+    getgenv().AutoStrength = bool
+    if bool then
+        aStrength()
+    end
+end)
+LeftGroupBox:AddToggle('AutoAccuracy', {
+    Text = 'Auto Accuracy',
+    Default = false, -- Default value (true / false)
+    Tooltip = 'Auto Upgrades Accuracy', -- Information shown when you hover over the toggle
+})
+Toggles.AutoAccuracy:OnChanged(function(bool)
+    getgenv().AutoAcc = bool
+    if bool then
+        AutoAccu()
+    end
+end)
+LeftGroupBox:AddToggle('AutoSpeed', {
+    Text = 'Auto Speed',
+    Default = false, -- Default value (true / false)
+    Tooltip = 'Auto Upgrades Speed', -- Information shown when you hover over the toggle
+})
+Toggles.AutoSpeed:OnChanged(function(bool)
+    getgenv().AutoSpeed = bool
+    if bool then
+        AutoSpeed()
+    end
+end)
+LeftGroupBox:AddDivider()
+LeftGroupBox:AddLabel('Rebirth')
+LeftGroupBox:AddToggle('AutoRebirth', {
+    Text = 'Auto Rebirth',
+    Default = false, -- Default value (true / false)
+    Tooltip = 'Auto Rebirths', -- Information shown when you hover over the toggle
+})
+Toggles.AutoRebirth:OnChanged(function(bool)
+    getgenv().AutoRebirth = bool
+    if bool then
+        aRebirth()
+    end
+end)
+
+local RightGroupBox = Tabs.Main:AddRightGroupbox('Main Features')
+
+RightGroupBox:AddToggle('AutoCrates', {
+    Text = 'Buy Selected Crate',
+    Default = false, -- Default value (true / false)
+    Tooltip = 'Auto Crates', -- Information shown when you hover over the toggle
+})
+Toggles.AutoCrates:OnChanged(function(bool)
+    getgenv().autoCrates = bool
+    print("Auto Crate is on", bool)
+    if bool and CrateAmount then
+        autoCrates(CrateAmount)
+    end
+end)
+RightGroupBox:AddDropdown('AutoCrates', {
+
+    Values = {"General 1", "General 2", "Forest", "Parking Lot", "Desert", "Beach", "Premium 1", "Premium 2", "Moon", "Mars", "Jupiter", "Saturn", "Uranus"},
+    Default = 0,
+    Multi = false,
+
+    Text = 'Select Crate',
+    Tooltip = 'Select Crate to Auto Buy',
+})
+
+Options.AutoCrates:OnChanged(function(value)
+    CrateAmount = value
+    print("Crate Amount is", value)
+end)
+RightGroupBox:AddDivider()
+RightGroupBox:AddLabel('Other')
+
+
+RightGroupBox:AddSlider('WalkSpeedSlider', {
+    Text = 'Walk Speed',
+    Default = 15,
+    Min = 0,
+    Max = 500,
+    Rounding = 0,
+
+    Compact = false, -- If set to true, then it will hide the label
+})
+
+local Number = Options.WalkSpeedSlider.Value
+Options.WalkSpeedSlider:OnChanged(function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Options.WalkSpeedSlider.Value
+end)
+
+RightGroupBox:AddSlider('FovSlider', {
+    Text = 'Fov',
+    Default = 70,
+    Min = 0,
+    Max = 120,
+    Rounding = 0,
+
+    Compact = false, -- If set to true, then it will hide the label
+})
+
+local Number = Options.FovSlider.Value
+Options.FovSlider:OnChanged(function()
+    game.Workspace.CurrentCamera.FieldOfView = Options.FovSlider.Value
+end)
+
+RightGroupBox:AddLabel("There is an integrated anti-afk")
+
+
+
+
+
+
+
+
+
+
+local TeleportTab = {
+    Teleports = Window:AddTab('Teleports'),
+}
+
+local LeftGroupBox = TeleportTab.Teleports:AddLeftGroupbox('Teleports')
+
+local Tp = LeftGroupBox:AddButton('Spawn', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-367.0051574707031, 7.025942325592041, -549.5798950195312)
+end)
+local Tp = LeftGroupBox:AddButton('Forest', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-215.09475708007812, 7.400743007659912, -407.04791259765625)
+end)
+local Tp = LeftGroupBox:AddButton('Parking Lot', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-7.797237396240234, 7.600554466247559, -184.19631958007812)
+end)
+local Tp = LeftGroupBox:AddButton('Desert', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(238.42007446289062, 7.300510406494141, 65.0420150756836)
+end)
+local Tp = LeftGroupBox:AddButton('Beach', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(502.92364501953125, 7.30302095413208, 284.9736633300781)
+end)
+local Tp = LeftGroupBox:AddButton('Moon', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1130.167236328125, 468.8114318847656, 985.21240234375)
+end)
+local Tp = LeftGroupBox:AddButton('Mars', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1904.2352294921875, 617.3434448242188, 1751.1485595703125)
+end)
+local Tp = LeftGroupBox:AddButton('Jupiter', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3115.573974609375, 987.3417358398438, 3297.0791015625)
+end)
+local Tp = LeftGroupBox:AddButton('Saturn', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4235.3974609375, 592.3695068359375, 5186.92333984375)
+end)
+local Tp = LeftGroupBox:AddButton('Uranus', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6053.74853515625, 809.7354125976562, 8039.029296875)
+end)
+local Tp = LeftGroupBox:AddButton('VIP Island', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(350.64581298828125, 181.61624145507812, -106.31986236572266)
+end)
+local Tp = LeftGroupBox:AddButton('Toolbox For Quest', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1070.073, 466.760864, 1115.91797, 0.707134247, -0, -0.707079291, 0, 1, -0, 0.707079291, 0, 0.707134247)
+end)
+
+
+local CreditTab = {
+    -- Creates a new tab titled Main
+    Credits = Window:AddTab('Credits'),
+}
+
+local LeftGroupBox = CreditTab.Credits:AddLeftGroupbox('Credits')
+LeftGroupBox:AddLabel("Created by xdeformedbread#4207")
+LeftGroupBox:AddLabel("if you bought this you got scammed!")
+LeftGroupBox:AddLabel(" Join the discord!")
+
+local MyButton = LeftGroupBox:AddButton('Copy discord link', function()
+    setclipboard("https://discord.gg/rgWdSEUmQ7")
+    toclipboard("https://discord.gg/rgWdSEUmQ7")
+    print("Join The Discord")
+end)
+MyButton:AddTooltip("Copies the discord link to your clipboard")
+
+
+--anti afk
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
